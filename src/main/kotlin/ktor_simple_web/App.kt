@@ -3,6 +3,10 @@
  */
 package ktor_simple_web
 
+import io.ktor.server.engine.embeddedServer
+import io.ktor.server.netty.Netty
+
+
 class App {
     val greeting: String
         get() {
@@ -11,5 +15,8 @@ class App {
 }
 
 fun main(args: Array<String>) {
-    println(App().greeting)
+
+    embeddedServer(Netty, port = 8080){}.start(wait=true)
+
+
 }

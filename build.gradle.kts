@@ -25,8 +25,24 @@ dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+    implementation("org.jetbrains.exposed:exposed:0.12.1")
+    // H2 in-memory database
+    implementation("com.h2database:h2:1.4.191")
+    // Exposed depends on Joda-time so include it
+    implementation("joda-time:joda-time:2.9.2")
+
+    implementation("io.ktor:ktor-freemarker:1.1.3")
+
+    implementation("io.ktor:ktor-server-core:1.1.3")
+    implementation("io.ktor:ktor-server-netty:1.1.3")
+    implementation("ch.qos.logback:logback-classic:1.2.3")
+
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+
+
+
+
 
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
